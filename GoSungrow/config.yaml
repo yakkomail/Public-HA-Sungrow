@@ -4,7 +4,7 @@ version: "3.0.7"
 stage: "stable"
 slug: "gosungrow"
 url: "https://github.com/yakkomail/Public-HA-Sungrow/GoSungrow"
-codenotary: "mick@mickmake.com"
+codenotary: ""
 arch:
   - armhf
   - armv7
