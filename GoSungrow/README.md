@@ -1,39 +1,35 @@
-# GoSungrow for [Home Assistant](https://www.home-assistant.io/).
 
-[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
+# Hassio add-on Repository
+This repository contains Hass.io add-ons. All add-ons in this repository are tested on Hass.io, Home Assistant Core installation is not supported.
 
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
+### Installation
+1. Navigate in your Home Assistant frontend to <kbd>Supervisor</kbd> -> <kbd>Add-on Store</kbd>.
 
-## What is it?
-This [Home Assistant](https://www.home-assistant.io/) add-on uses the [GoSungrow](https://github.com/MickMake/GoSungrow) GoLang package to query the iSolarCloud API and provide all data on your solar array within [Home Assistant](https://www.home-assistant.io/).
+![Install add-on](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/ScreenShot1.png)
 
-The iSolarCloud interface is kinda nice, but it's not Open Source...
+2. Click the 3-dots menu at upper right <kbd>...</kbd> > <kbd>Repositories</kbd> and add this repository's URL: [https://github.com/MickMake/HomeAssistantAddons](https://github.com/MickMake/HomeAssistantAddons)
 
-|                                              iSolarCloud                                              |                                              GoSunGrow HA                                               |
-|:-----------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------:|
-| ![iSolarCloud](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/UX-iSolarCloud.png) | ![GoSunGrow-HA](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/UX-GoSunGrow-HA.png) |
+![Install add-on](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/ScreenShot2.png)
 
-So, now you can get to everything using [Home Assistant](https://www.home-assistant.io/).
+![Install add-on](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/ScreenShot3.png)
 
-|                                              -                                              |                                              -                                               |
-|:-------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------:|
-| ![LoveLace-Basic1.png](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/LoveLace-Basic1.png) | ![LoveLace-Basic2.png](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/LoveLace-Basic2.png) |
-| | |
-| ![LoveLace-Basic3.png](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/LoveLace-Basic3.png) | ![LoveLace-Basic4.png](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/LoveLace-Basic4.png) |
-| | |
-| ![LoveLace-Basic5.png](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/LoveLace-Basic5.png) | ![LoveLace-Basic6.png](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/LoveLace-Basic6.png) |
-| | |
+![Install add-on](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/ScreenShot4.png)
+
+3. Scroll down the page to find the new repository, and click the new add-on named you want. Ex:
+
+![Install add-on](https://github.com/MickMake/HomeAssistantAddons/raw/main/GoSungrow/docs/ScreenShot4b.png)
+
+4. Click <kbd>Install</kbd> and give it a few minutes to finish downloading.
+
+5. Follow the instruction for each addon to configures.
 
 
-## Further docs
-[Install and configure](https://github.com/MickMake/HomeAssistantAddons/blob/main/GoSungrow/DOCS.md)
+### Updating
+Enable `Auto update` on the desired add-on or browse Hassio Add-on Store Tab to check for update
 
-[GoSunGrow](https://github.com/MickMake/GoSunGrow/)
+# Add-ons in this Repository
+
+### [GoSunGrow for HA](https://github.com/MickMake/HomeAssistantAddons/tree/main/GoSungrow)
+My iSolarCloud API interface for [Home Assistant](https://www.home-assistant.io/).
+
+The [GoSunGrow](https://github.com/MickMake/GoSunGrow/) API interface doesn't just do HA, but a lot more.
