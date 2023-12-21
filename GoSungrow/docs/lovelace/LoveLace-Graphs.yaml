@@ -1,0 +1,2213 @@
+views:
+  - theme: Backend-selected
+    title: Power
+    path: power
+    type: panel
+    icon: mdi:solar-power
+    badges: []
+    cards:
+      - square: false
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13003
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV Yield (kW)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 4
+                  color: rgba(200, 50, 50, .75)
+                - from: 4
+                  to: 8
+                  color: rgba(200, 200, 50, .75)
+                - from: 8
+                  to: 12
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kW
+            lower_bound: 0
+            points_per_hour: 20
+            line_width: 1
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13003
+                name: PV Yield
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_to_battery_power
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV to Battery (kW)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 4
+                  color: rgba(200, 50, 50, .75)
+                - from: 4
+                  to: 8
+                  color: rgba(200, 200, 50, .75)
+                - from: 8
+                  to: 10.36
+                  color: rgba(50, 200, 50, .75)
+                - from: 10.36
+                  to: 12
+                  color: rgba(128, 128, 128, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kW
+            lower_bound: 0
+            points_per_hour: 20
+            line_width: 1
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_to_battery_power
+                name: PV to Battery
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_to_grid_power
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV to Grid (kW)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 4
+                  color: rgba(200, 50, 50, .75)
+                - from: 4
+                  to: 8
+                  color: rgba(200, 200, 50, .75)
+                - from: 8
+                  to: 12
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kW
+            lower_bound: 0
+            points_per_hour: 20
+            line_width: 1
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_to_grid_power
+                name: PV to Grid
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_to_load_power
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV to Load (kW)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 4
+                  color: rgba(200, 50, 50, .75)
+                - from: 4
+                  to: 8
+                  color: rgba(200, 200, 50, .75)
+                - from: 8
+                  to: 12
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kW
+            lower_bound: 0
+            points_per_hour: 20
+            line_width: 1
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_to_load_power
+                name: PV to Load
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13119
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Load (kW)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 4
+                  color: rgba(50, 200, 50, .75)
+                - from: 4
+                  to: 8
+                  color: rgba(200, 200, 50, .75)
+                - from: 8
+                  to: 12
+                  color: rgba(200, 50, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(50, 200, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(200, 50, 50, .75)
+            hour24: true
+            animate: false
+            unit: kW
+            lower_bound: 0
+            points_per_hour: 20
+            line_width: 1
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13119
+                name: Load
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_battery_to_load_power
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery to Load (kW)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 6
+                  color: rgba(200, 200, 50, .75)
+                - from: 6
+                  to: 12
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 200, 50, .75)
+              - value: 6
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kW
+            lower_bound: 0
+            upper_bound: 12
+            points_per_hour: 20
+            line_width: 1
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_battery_to_load_power
+                name: Battery to Load
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13149
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Grid to Load (kW)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 2
+                  color: rgba(50, 200, 50, .75)
+                - from: 2
+                  to: 6
+                  color: rgba(200, 200, 50, .75)
+                - from: 6
+                  to: 12
+                  color: rgba(200, 50, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(50, 200, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(200, 50, 50, .75)
+            hour24: true
+            animate: false
+            unit: kW
+            lower_bound: 0
+            upper_bound: 12
+            points_per_hour: 20
+            line_width: 1
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13149
+                name: Grid to Load
+  - theme: Backend-selected
+    title: Energy
+    path: energy
+    type: panel
+    icon: mdi:home-lightning-bolt-outline
+    badges: []
+    cards:
+      - square: false
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13112
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV Yield (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 60
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '10'
+                - '20'
+                - '30'
+                - '40'
+                - '50'
+                - '60'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 15
+                  color: rgba(200, 50, 50, .75)
+                - from: 15
+                  to: 30
+                  color: rgba(200, 200, 50, .75)
+                - from: 30
+                  to: 60
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 15
+                color: rgba(200, 200, 50, .75)
+              - value: 30
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 60
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13112
+                name: PV Yield
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_battery_discharge_energy
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV to Battery (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 4
+                  color: rgba(200, 50, 50, .75)
+                - from: 4
+                  to: 8
+                  color: rgba(200, 200, 50, .75)
+                - from: 8
+                  to: 12
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 12
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: >-
+                  sensor.gosungrow_virtual_1171348_14_1_2_battery_discharge_energy
+                name: PV to Battery
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_consumption_energy
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV to Load (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 60
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '10'
+                - '20'
+                - '30'
+                - '40'
+                - '50'
+                - '60'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 10
+                  color: rgba(200, 50, 50, .75)
+                - from: 10
+                  to: 20
+                  color: rgba(200, 200, 50, .75)
+                - from: 20
+                  to: 60
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 10
+                color: rgba(200, 200, 50, .75)
+              - value: 20
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 60
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_consumption_energy
+                name: PV to Load
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13173
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: PV to Grid (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 60
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '10'
+                - '20'
+                - '30'
+                - '40'
+                - '50'
+                - '60'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 15
+                  color: rgba(200, 50, 50, .75)
+                - from: 15
+                  to: 30
+                  color: rgba(200, 200, 50, .75)
+                - from: 30
+                  to: 60
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 15
+                color: rgba(200, 200, 50, .75)
+              - value: 30
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 60
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13173
+                name: PV to Grid
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_consumption_energy
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Load (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 60
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '10'
+                - '20'
+                - '30'
+                - '40'
+                - '50'
+                - '60'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 15
+                  color: rgba(50, 200, 50, .75)
+                - from: 15
+                  to: 30
+                  color: rgba(200, 200, 50, .75)
+                - from: 30
+                  to: 60
+                  color: rgba(200, 50, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 25
+                color: rgba(200, 200, 50, .75)
+              - value: 35
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 60
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_consumption_energy
+                name: Load
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13029
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery to Load (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 5
+                  color: rgba(200, 200, 50, .75)
+                - from: 5
+                  to: 10
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 200, 50, .75)
+              - value: 5
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            animate: false
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 12
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13029
+                name: Battery to Load
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13147
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Grid to Load (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 24
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '4'
+                - '8'
+                - '12'
+                - '16'
+                - '20'
+                - '24'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 6
+                  color: rgba(50, 200, 50, .75)
+                - from: 6
+                  to: 12
+                  color: rgba(200, 200, 50, .75)
+                - from: 12
+                  to: 24
+                  color: rgba(200, 50, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(50, 200, 50, .75)
+              - value: 6
+                color: rgba(200, 200, 50, .75)
+              - value: 12
+                color: rgba(200, 50, 50, .75)
+            hour24: true
+            animate: false
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 24
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13147
+                name: Grid to Load
+  - theme: Backend-selected
+    type: panel
+    title: Battery
+    icon: mdi:home-battery
+    path: battery
+    badges: []
+    cards:
+      - square: false
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_battery_charge_energy
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery Charge (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 12
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '2'
+                - '4'
+                - '6'
+                - '8'
+                - '10'
+                - '12'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 4
+                  color: rgba(200, 50, 50, .75)
+                - from: 4
+                  to: 8
+                  color: rgba(200, 200, 50, .75)
+                - from: 8
+                  to: 10.36
+                  color: rgba(50, 200, 50, .75)
+                - from: 10.36
+                  to: 12
+                  color: rgba(128, 128, 128, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 12
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_battery_charge_energy
+                name: Battery Charge
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13140
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery Capacity (kWh)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 25
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: false
+              majorTicks:
+                - '0'
+                - '5'
+                - '10'
+                - '15'
+                - '20'
+                - '25'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 10.36
+                  color: rgba(50, 200, 50, .75)
+                - from: 10.36
+                  to: 25
+                  color: rgba(128, 128, 128, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 4
+                color: rgba(200, 200, 50, .75)
+              - value: 8
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            unit: kWh
+            lower_bound: 0
+            upper_bound: 12
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13140
+                name: Battery Capacity
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13141
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery Level (%)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 100
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: true
+              majorTicks:
+                - '0'
+                - '10'
+                - '20'
+                - '30'
+                - '40'
+                - '50'
+                - '60'
+                - '70'
+                - '80'
+                - '90'
+                - '100'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 25
+                  color: rgba(200, 50, 50, .75)
+                - from: 25
+                  to: 50
+                  color: rgba(200, 200, 50, .75)
+                - from: 50
+                  to: 100
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 25
+                color: rgba(200, 200, 50, .75)
+              - value: 50
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            unit: '%'
+            lower_bound: 0
+            upper_bound: 100
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13141
+                name: Battery Level
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_14_1_2_p13142
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery Health (%)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 100
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: true
+              majorTicks:
+                - '0'
+                - '10'
+                - '20'
+                - '30'
+                - '40'
+                - '50'
+                - '60'
+                - '70'
+                - '80'
+                - '90'
+                - '100'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 25
+                  color: rgba(200, 50, 50, .75)
+                - from: 25
+                  to: 50
+                  color: rgba(200, 200, 50, .75)
+                - from: 50
+                  to: 100
+                  color: rgba(50, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 50, 50, .75)
+              - value: 25
+                color: rgba(200, 200, 50, .75)
+              - value: 50
+                color: rgba(50, 200, 50, .75)
+            hour24: true
+            unit: '%'
+            lower_bound: 0
+            upper_bound: 100
+            icon: mdi:battery-heart-outline
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13142
+                name: Battery Health
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_43_2_2_p58601
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery Voltage (V)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: 0
+              maxValue: 500
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: true
+              majorTicks:
+                - '0'
+                - '100'
+                - '200'
+                - '300'
+                - '400'
+                - '500'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: 0
+                  to: 150
+                  color: rgba(200, 200, 50, .75)
+                - from: 150
+                  to: 300
+                  color: rgba(50, 200, 50, .75)
+                - from: 300
+                  to: 500
+                  color: rgba(200, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: 0
+                color: rgba(200, 200, 50, .75)
+              - value: 150
+                color: rgba(50, 200, 50, .75)
+              - value: 250
+                color: rgba(200, 200, 50, .75)
+            hour24: true
+            unit: V
+            lower_bound: 0
+            upper_bound: 500
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_43_2_2_p58601
+                name: Battery Voltage
+          - type: custom:canvas-gauge-card
+            entity: sensor.gosungrow_virtual_1171348_43_2_2_p58602
+            card_height: 220
+            gauge:
+              type: radial-gauge
+              title: Battery Current (A)
+              height: 420
+              borderShadowWidth: 0
+              borderOuterWidth: 0
+              borderMiddleWidth: 0
+              borderInnerWidth: 0
+              minValue: -30
+              maxValue: 30
+              startAngle: 90
+              ticksAngle: 180
+              valueBox: true
+              majorTicks:
+                - '-30'
+                - '20'
+                - '-10'
+                - '0'
+                - '10'
+                - '20'
+                - '30'
+              minorTicks: 2
+              strokeTicks: true
+              highlights:
+                - from: -30
+                  to: -15
+                  color: rgba(200, 200, 50, .75)
+                - from: -15
+                  to: 15
+                  color: rgba(50, 200, 50, .75)
+                - from: 15
+                  to: 30
+                  color: rgba(200, 200, 50, .75)
+              borders: true
+          - type: custom:mini-graph-card
+            show:
+              labels: true
+              points: false
+              icon: false
+              name: false
+              average: true
+              extrema: true
+            color_thresholds:
+              - value: -25
+                color: rgba(200, 200, 50, .75)
+              - value: 0
+                color: rgba(50, 200, 50, .75)
+              - value: 25
+                color: rgba(200, 200, 50, .75)
+            hour24: true
+            unit: A
+            lower_bound: -50
+            upper_bound: 50
+            points_per_hour: 20
+            line_width: 1
+            hours_to_show: 16
+            height: 150
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_43_2_2_p58602
+                name: Battery Current
+  - title: VA
+    path: va
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - square: false
+            columns: 2
+            type: grid
+            cards:
+              - type: grid
+                cards:
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13138
+                    min: 0
+                    max: 400
+                    needle: true
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13161
+                    min: 0
+                    max: 800
+                    needle: true
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13001
+                    min: 0
+                    max: 400
+                    needle: true
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13105
+                    min: 0
+                    max: 400
+                    needle: true
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13157
+                    min: 0
+                    max: 400
+                    needle: true
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13158
+                    min: 0
+                    max: 400
+                    needle: true
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13159
+                    min: 0
+                    max: 400
+                    needle: true
+                columns: 1
+                square: false
+              - type: grid
+                cards:
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13139
+                    min: 0
+                    max: 10
+                    needle: true
+                    severity:
+                      green: 0
+                      yellow: 8
+                      red: 9
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13161
+                    min: 0
+                    max: 800
+                    needle: true
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13002
+                    min: 0
+                    max: 10
+                    needle: true
+                    severity:
+                      green: 0
+                      yellow: 8
+                      red: 9
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13106
+                    min: 0
+                    max: 10
+                    needle: true
+                    severity:
+                      green: 0
+                      yellow: 8
+                      red: 9
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13008
+                    min: 0
+                    max: 10
+                    needle: true
+                    severity:
+                      green: 0
+                      yellow: 8
+                      red: 9
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13009
+                    min: 0
+                    max: 10
+                    needle: true
+                    severity:
+                      green: 0
+                      yellow: 8
+                      red: 9
+                  - type: gauge
+                    entity: sensor.gosungrow_virtual_1171348_14_1_2_p13010
+                    min: 0
+                    max: 10
+                    needle: true
+                    severity:
+                      green: 0
+                      yellow: 8
+                      red: 9
+                columns: 1
+                square: false
+  - theme: Backend-selected
+    title: Direction
+    path: direction
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - entity: binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_power_active
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_to_battery_power_active
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_to_grid_power_active
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_to_load_power_active
+            state_color: true
+            title: PV
+          - type: entities
+            entities:
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_battery_power_active
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_battery_to_grid_power_active
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_battery_to_load_power_active
+            state_color: true
+            title: Battery
+          - type: entities
+            entities:
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_grid_power_active
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_grid_to_battery_power_active
+              - entity: >-
+                  binary_sensor.gosungrow_virtual_1171348_14_1_2_grid_to_load_power_active
+            state_color: true
+            title: Grid
+          - type: entities
+            entities:
+              - binary_sensor.gosungrow_virtual_1171348_14_1_2_load_power_active
+            state_color: true
+            title: Load
+  - theme: Backend-selected
+    title: Yield (Week)
+    path: yield-week
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                aggregate_func: max
+                name: Max
+                color: null
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                aggregate_func: min
+                name: Min
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                aggregate_func: avg
+                name: Avg
+                color: green
+            name: PV Yield (week)
+            hours_to_show: 168
+            group_by: hour
+            points_per_hour: 20
+            line_width: 1
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    type: panel
+    title: Yield (fortnight)
+    path: yield-fortnight
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                aggregate_func: max
+                name: Max
+                color: null
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                aggregate_func: min
+                name: Min
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                aggregate_func: avg
+                name: Avg
+                color: green
+            name: PV Yield (hour)
+            hours_to_show: 336
+            group_by: hour
+            points_per_hour: 20
+            line_width: 1
+          - chart_type: line
+            period: hour
+            days_to_show: 14
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: Yield (Month)
+    type: panel
+    path: yield-month
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - square: false
+            columns: 1
+            type: grid
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                  - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                    aggregate_func: max
+                    name: Max
+                    color: null
+                  - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                    aggregate_func: min
+                    name: Min
+                  - entity: sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                    aggregate_func: avg
+                    name: Avg
+                    color: green
+                name: PV Yield (monthly)
+                hours_to_show: 744
+                group_by: hour
+                points_per_hour: 20
+                line_width: 1
+              - chart_type: line
+                period: hour
+                days_to_show: 31
+                type: statistics-graph
+                entities:
+                  - sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+                stat_types:
+                  - mean
+                  - min
+                  - max
+  - theme: Backend-selected
+    title: Energy
+    path: info-energy
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13125
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13175
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13130
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13137
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13148
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13176
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13174
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13122
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13173
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13199
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13116
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13147
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13144
+            title: Energy
+            state_color: true
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13125
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13175
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13130
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13137
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13148
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13176
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13173
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13147
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13174
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13199
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13122
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13144
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13116
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: Power
+    path: info-power
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13126
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13150
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13149
+            title: Power
+            state_color: true
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13126
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13150
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13149
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: Battery
+    path: info-battery
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_battery_energy_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_battery_power_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_battery_to_grid_power_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_battery_to_load_power_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_to_battery_power_active
+              - sensor.gosungrow_virtual_1171348_14_1_2_battery_charge_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_battery_charge_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_battery_discharge_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_battery_discharge_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_battery_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_battery_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_battery_to_load_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_to_battery_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_to_battery_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13034
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13035
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13176
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13028
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13029
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13140
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13174
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13126
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13150
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13138
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13139
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13162
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13163
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13143
+            title: Battery Information
+            state_color: true
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13034
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13035
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13176
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13028
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13029
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13140
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13174
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13126
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13150
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13138
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13139
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13162
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13163
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13143
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: Grid
+    path: info-grid
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - binary_sensor.gosungrow_virtual_1171348_14_1_2_grid_power_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_grid_to_battery_power_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_grid_to_load_power_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_to_grid_power_active
+              - sensor.gosungrow_virtual_1171348_14_1_2_grid_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_grid_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_grid_to_load_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_grid_to_load_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_to_grid_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_to_grid_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13121
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13125
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13148
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13175
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13122
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13147
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13149
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13173
+            state_color: true
+            title: Grid Information
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13125
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13148
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13175
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13122
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13147
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13173
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13121
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13149
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: Load
+    path: info-load
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - binary_sensor.gosungrow_virtual_1171348_14_1_2_load_power_active
+              - sensor.gosungrow_virtual_1171348_14_1_2_daily_total_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_load_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_consumption_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_to_load_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_total_daily_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_total_load_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13119
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13130
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13137
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13116
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13199
+            title: Load Information
+            state_color: true
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13119
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13130
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13137
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13116
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13199
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: MPPT
+    path: info-mppt
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13001
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13105
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13002
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13106
+            title: MPPT Information
+            state_color: true
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13001
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13105
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13002
+              - entity: sensor.gosungrow_virtual_1171348_14_1_2_p13106
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: Overview
+    path: info-overview
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_power_active
+              - >-
+                binary_sensor.gosungrow_virtual_1171348_14_1_2_pv_to_load_power_active
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_daily_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_total_energy
+              - sensor.gosungrow_virtual_1171348_14_1_2_pv_to_load_power
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13003
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13011
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18065
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18066
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18067
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18068
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13112
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13134
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13008
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13009
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13010
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18062
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18063
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18064
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13157
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13158
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13159
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13161
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13007
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13012
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13013
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13019
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13160
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13155
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18061
+            title: Overview
+            state_color: true
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13003
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13011
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18065
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18066
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18067
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18068
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13112
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13134
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13008
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13009
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13010
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18062
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18063
+              - sensor.gosungrow_virtual_1171348_14_1_2_p18064
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13157
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13158
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13159
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13161
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13007
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13012
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13013
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13019
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - sensor.gosungrow_virtual_1171348_14_1_2_p13160
+            stat_types:
+              - mean
+              - min
+              - max
+  - theme: Backend-selected
+    title: Other
+    path: info-other
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 1
+        type: grid
+        cards:
+          - type: entities
+            entities:
+              - sensor.gosungrow_virtual_1171348_22_247_2_p23014
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58601
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58602
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58603
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58606
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58607
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58608
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58609
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58610
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58611
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58612
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58613
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58614
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58615
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58616
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58617
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58618
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58619
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58620
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58621
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58622
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58623
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58624
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58625
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58626
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58627
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58628
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58629
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58630
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58631
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58632
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58633
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58635
+              - sensor.gosungrow_virtual_1171348_43_2_2_p58636
+            title: Other Information
+            state_color: true
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_43_2_2_p58601
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_43_2_2_p58602
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_43_2_2_p58603
+            stat_types:
+              - mean
+              - min
+              - max
+          - chart_type: line
+            period: hour
+            days_to_show: 7
+            type: statistics-graph
+            entities:
+              - entity: sensor.gosungrow_virtual_1171348_43_2_2_p58606
+              - entity: sensor.gosungrow_virtual_1171348_43_2_2_p58607
+            stat_types:
+              - mean
+              - min
+              - max

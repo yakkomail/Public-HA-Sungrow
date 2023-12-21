@@ -1,0 +1,49 @@
+name: "GoSungrow"
+description: "Fetch data from isolarcloud.com and push to HA."
+version: "3.0.7"
+stage: "stable"
+slug: "gosungrow"
+url: "https://github.com/MickMake/GoSunGrow/"
+codenotary: "mick@mickmake.com"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+map:
+  - config:rw
+panel_icon: mdi:solar-power
+auth_api: true
+hassio_role: "admin"
+hassio_api: true
+homeassistant_api: true
+startup: "application"
+init: false
+services:
+  - mqtt:need
+
+options:
+  sungrow_host: "https://augateway.isolarcloud.com"
+  sungrow_user: ""
+  sungrow_password: ""
+  sungrow_appkey: ""
+  mqtt_host: "core-mosquitto"
+  mqtt_port: "1883"
+  mqtt_user: ""
+  mqtt_password: ""
+  debug: false
+  sungrow_timeout: 60
+
+schema:
+  sungrow_host: str?
+  sungrow_user: str
+  sungrow_password: password
+  sungrow_appkey: str?
+  mqtt_host: str?
+  mqtt_port: str?
+  mqtt_user: str
+  mqtt_password: password
+  debug: bool?
+  sungrow_timeout: int?
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+
